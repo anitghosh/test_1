@@ -1,0 +1,40 @@
+
+public class Day
+{
+    public static void main(String[] args) 
+    {
+        Cuboid c1=new Cuboid(1,1,1);
+        Cuboid c2=new Cuboid(6,6,6);
+        
+        System.out.println("Area of c1:"+c1.surface_area());
+        System.out.println("Area of c2:"+c2.surface_area());
+        System.out.println("Volume of c1:"+c1.volume());
+    
+        System.out.println("Volume of c2:"+c2.volume());
+        
+    }
+    
+}
+
+class Cuboid
+{
+    private double l;
+    private double b;
+    private double h;
+    
+    public Cuboid(double l,double b,double h)
+    {
+        this.l=l;
+        this.b=b;
+        this.h=h;
+    }
+    
+    public double volume()
+    {
+        return l*b*h;
+    }
+    public double surface_area()
+    {
+        return (2*((l*b)+(b*h)+(h*l)));
+    }
+}
